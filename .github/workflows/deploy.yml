@@ -34,7 +34,7 @@ jobs:
           key: ${{ secrets.EC2_SSH_KEY }}
           proxy_host: ${{ secrets.BASTION_PUBLIC_IP }}
           proxy_key: ${{ secrets.BASTION_SSH_KEY }}
-          proxy_user: ec2-user
+          proxy_username: ec2-user
           script: |
             docker pull ${{ secrets.DOCKERHUB_USERNAME }}/backend:latest
             
