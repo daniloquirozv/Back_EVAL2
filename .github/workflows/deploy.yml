@@ -36,10 +36,10 @@ jobs:
           proxy_key: ${{ secrets.BASTION_SSH_KEY }}
           proxy_username: ec2-user
           script: |
-            docker pull ${{ secrets.DOCKERHUB_USERNAME }}/backend:latest
+            sudo docker pull ${{ secrets.DOCKERHUB_USERNAME }}/backend:latest
             
-            docker stop backend || true
-            docker rm backend || true
+            sudo docker stop backend || true
+            sudo docker rm backend || true
             
             docker run -d \
               --name backend \
