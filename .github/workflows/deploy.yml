@@ -41,7 +41,7 @@ jobs:
             sudo docker stop backend || true
             sudo docker rm backend || true
             
-            docker run -d \
+            sudo docker run -d \
               --name backend \
               -p 3000:3000 \
               -e DB_HOST=${{ secrets.DB_HOST }} \
