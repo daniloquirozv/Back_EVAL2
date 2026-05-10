@@ -51,4 +51,3 @@ jobs:
               -e DB_PORT=${{ secrets.DB_PORT }} \
               --restart always \
               ${{ secrets.DOCKERHUB_USERNAME }}/backend:latest   
-              
